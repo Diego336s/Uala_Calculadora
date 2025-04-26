@@ -10,7 +10,7 @@ RUN a2enmod rewrite
 COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Copiar el contenido del proyecto al directorio raíz de Apache
-COPY . /var/www/html/
+COPY docker /var/www/html/
 
 # Establecer el directorio de trabajo
 WORKDIR /var/www/html
