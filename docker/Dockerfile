@@ -10,7 +10,7 @@ COPY ./docker/apache.conf /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
 
 # Copiar el proyecto a la carpeta de Apache
-COPY . /var/www/html/
+COPY .. /var/www/html/
 
 # Dar permisos
 RUN chown -R www-data:www-data /var/www/html
